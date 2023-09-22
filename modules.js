@@ -12,5 +12,20 @@
 // 3- third party modules : modules available online form the npm
 
 
+//module patterns
+
+var counter = function(arr){
+    return arr.length
+}
+
+var adder = function(a,b){
+    return a + b
+}
+
+module.export = {counter:counter,adder:adder} // destruction object notation , module.export is a object
+module.export.counter = counter // another way
+module.export.counter = function(){
+    //code
+}
 
 
