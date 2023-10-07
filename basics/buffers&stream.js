@@ -17,8 +17,8 @@
 
 var fs = require('fs')
 
-var myReadStream = fs.createReadStream(__filename + 'README.md','utf8')
-var myWriteStream = fs.WriteStream(__dirname,'/writeme.txt')
+var myReadStream = fs.createReadStream(__dirname + 'README.md','utf8')
+var myWriteStream = fs.WriteStream(__dirname +'/writeme.txt')
 myReadStream.on('data',(chunk)=>{
     console.log(`chunk is rev ${chunk}`)
     myWriteStream.writ(chunk)
